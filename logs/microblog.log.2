@@ -1,0 +1,67 @@
+2022-10-09 23:25:21,119 ERROR: Exception on /translate [POST] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/util/connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.10/socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7f2763ffbd00>: Failed to establish a new connection: [Errno -2] Name or service not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/urllib3/util/retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='translate.yandex.net', port=443): Max retries exceeded with url: /api/v1.5/tr.json/translate?key=trnsl.1.1.20220920T135241Z.83a02de1f3c99026.43b0381170f5da6edfa4c18aa9014f483f1fec44&text=%CE%97+%CE%9C%CE%AF%CE%BB%CE%B1%CE%BD+%CF%84%CE%B5%CE%BB%CE%B9%CE%BA%CE%AC+%CE%BA%CE%AD%CF%81%CE%B4%CE%B9%CF%83%CE%B5&lang=el-en (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2763ffbd00>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/kali/PycharmProjects/microblog/app/main/routes.py", line 132, in translate_text
+    return jsonify({"text": translate(request.form["text"],
+  File "/home/kali/PycharmProjects/microblog/app/translate.py", line 18, in translate
+    r = get_translation(text,source_language,dest_language)
+  File "/home/kali/PycharmProjects/microblog/app/translate.py", line 7, in get_translation
+    response = r.get("https://translate.yandex.net/api/v1.5/tr.json/translate" ,
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/requests/adapters.py", line 565, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='translate.yandex.net', port=443): Max retries exceeded with url: /api/v1.5/tr.json/translate?key=trnsl.1.1.20220920T135241Z.83a02de1f3c99026.43b0381170f5da6edfa4c18aa9014f483f1fec44&text=%CE%97+%CE%9C%CE%AF%CE%BB%CE%B1%CE%BD+%CF%84%CE%B5%CE%BB%CE%B9%CE%BA%CE%AC+%CE%BA%CE%AD%CF%81%CE%B4%CE%B9%CF%83%CE%B5&lang=el-en (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7f2763ffbd00>: Failed to establish a new connection: [Errno -2] Name or service not known'))
+2022-10-09 23:25:55,982 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:78]
