@@ -9,7 +9,7 @@ class Config:
     LANGUAGES = ['en', 'es', 'ru']
     SECRET_KEY = os.environ.get("SECRET_KEY") or "you-will-never-guess"
     YA_TRANSLATOR_KEY = os.environ.get('YA_TRANSLATOR_KEY')
-    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL') or "https://localhost:9200"
     ELASTICSEARCH_USER=os.environ.get('ELASTICSEARCH_USER')
     ELASTICSEARCH_PASS=os.environ.get('ELASTICSEARCH_PASS')
     LOG_TO_STDOUT = os.environ.get("LOG_TO_STDOUT")
