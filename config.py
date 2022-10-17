@@ -12,6 +12,7 @@ class Config:
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     ELASTICSEARCH_USER=os.environ.get('ELASTICSEARCH_USER')
     ELASTICSEARCH_PASS=os.environ.get('ELASTICSEARCH_PASS')
+    LOG_TO_STDOUT = os.environ.get("LOG_TO_STDOUT")
     SECURITY_EMAIL_SENDER = "abisher71@gmail.com"
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABESE_URL") or \
                               f"sqlite:///{os.path.join(basedir, 'app.db')}"
