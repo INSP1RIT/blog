@@ -1,61 +1,4 @@
-2022-10-01 23:25:24,813 ERROR: Exception on /main/index [GET] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
-Traceback (most recent call last):
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1785, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1767, in raise_routing_exception
-    raise request.routing_exception  # type: ignore
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/ctx.py", line 351, in match_request
-    result = self.url_adapter.match(return_rule=True)  # type: ignore
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 624, in match
-    raise NotFound() from None
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1666, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1606, in handle_http_exception
-    return self.ensure_sync(handler)(e)
-  File "/home/kali/PycharmProjects/microblog/app/errors/handlers.py", line 7, in not_found_error
-    return render_template('errors/404.html') , 404
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 147, in render_template
-    return _render(app, template, context)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/templating.py", line 130, in _render
-    rv = template.render(context)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/jinja2/environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/home/kali/PycharmProjects/microblog/app/templates/errors/404.html", line 1, in top-level template code
-    {%  extends "base.html" %}
-  File "/home/kali/PycharmProjects/microblog/app/templates/base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
-    {% block body -%}
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
-    {% block navbar %}
-  File "/home/kali/PycharmProjects/microblog/app/templates/base.html", line 17, in block 'navbar'
-    <a class="navbar-brand" href="{{ url_for('index') }}">Microblog</a>
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
-    return self.handle_url_build_error(error, endpoint, values)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
-    rv = url_adapter.build(  # type: ignore[union-attr]
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index'. Did you mean 'main.index' instead?
-2022-10-01 23:29:25,027 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-01 23:29:32,566 ERROR: Exception on /index [GET] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+2022-10-08 11:05:11,504 ERROR: Exception on /index [GET] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -65,10 +8,14 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/kali/PycharmProjects/microblog/app/main/routes.py", line 42, in index
-    next_url = url_for("index", page=posts.next_num) \
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
     return current_app.url_for(
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
@@ -77,9 +24,10 @@ Traceback (most recent call last):
     rv = url_adapter.build(  # type: ignore[union-attr]
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'index' with values ['page']. Did you mean 'main.index' instead?
-2022-10-07 10:32:31,242 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 10:32:59,124 ERROR: Exception on /translate [POST] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-10-08 11:05:31,316 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 11:05:59,373 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 11:06:02,027 ERROR: Exception on /index [GET] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
 Traceback (most recent call last):
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
     response = self.full_dispatch_request()
@@ -89,23 +37,58 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
     return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-  File "/home/kali/PycharmProjects/microblog/app/main/routes.py", line 132, in translate_text
-    return jsonify({"text": translate(request.form["text"],
-  File "/home/kali/PycharmProjects/microblog/app/translate.py", line 18, in translate
-    r = get_translation(text,source_language,dest_language)
-  File "/home/kali/PycharmProjects/microblog/app/translate.py", line 8, in get_translation
-    params={"key": app.config['YA_TRANSLATOR_KEY'],
-NameError: name 'app' is not defined
-2022-10-07 10:33:49,178 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 14:32:13,123 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 20:10:38,740 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 20:50:46,221 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 21:09:14,042 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 21:16:10,763 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 21:24:27,996 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 21:24:50,592 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 21:59:34,837 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-07 22:01:10,389 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
-2022-10-08 10:42:43,191 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-10-08 11:06:17,659 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 11:07:14,051 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 11:07:16,820 ERROR: Exception on /index [GET] [in /home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py:1741]
+Traceback (most recent call last):
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 285, in decorated_view
+    return current_app.login_manager.unauthorized()
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/login_manager.py", line 196, in unauthorized
+    redirect_url = make_login_url(login_view, next_url=request.url)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 120, in login_url
+    base = expand_login_view(login_view)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask_login/utils.py", line 97, in expand_login_view
+    return url_for(login_view)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/helpers.py", line 256, in url_for
+    return current_app.url_for(
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2031, in url_for
+    return self.handle_url_build_error(error, endpoint, values)
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/flask/app.py", line 2020, in url_for
+    rv = url_adapter.build(  # type: ignore[union-attr]
+  File "/home/kali/PycharmProjects/microblog/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 917, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'login'. Did you mean 'auth.login' instead?
+2022-10-08 11:07:37,789 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 11:16:00,982 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 14:09:18,539 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 18:29:51,682 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-08 22:14:19,000 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-09 10:13:42,189 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-09 10:25:37,514 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:74]
+2022-10-09 20:58:54,901 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:78]
+2022-10-09 23:24:36,525 INFO: Microblog startup [in /home/kali/PycharmProjects/microblog/app/__init__.py:78]
